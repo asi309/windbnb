@@ -1,0 +1,51 @@
+nav.app__navbar {
+  justify-content: space-between;
+
+  max-height: 155px;
+  width: 100%;
+  padding: 32px 95px 50px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+
+  background-color: #fff;
+}
+
+.app__navbar-logo {
+  width: 96px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.app__navbar-expanded {
+  position: fixed;
+  top: 140px;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  min-height: 269px;
+
+  padding: 0px 95px 20px;
+
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: row;
+
+  .app__navbar-counters {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-left: 35%;
+    padding-left: 27px;
+  }
+}

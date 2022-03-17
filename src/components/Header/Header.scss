@@ -1,0 +1,22 @@
+div.app__header {
+  width: 100%;
+  margin-bottom: 32px;
+
+  justify-content: space-between;
+}
+
+.app__header-location {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: var(--primary-color);
+}
+
+.app__header-count {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: var(--gray-dark);
+}

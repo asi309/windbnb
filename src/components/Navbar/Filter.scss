@@ -1,0 +1,150 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.app__navbar-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.app__navbar-search-expanded {
+  @extend .app__navbar-search;
+
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.app__navbar-search-location,
+.app__navbar-search-guests,
+.app__navbar-search-btn {
+  display: flex;
+  justify-content: center;
+
+  padding: 18px 16px;
+  border-right: 1px solid #f2f2f2;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--primary-color);
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    scale: 1.02;
+  }
+
+  .app__navbar-blank {
+    color: #bdbdbd;
+  }
+}
+
+.app__navbar-search-location-expanded,
+.app__navbar-search-guests-expanded {
+  width: 35%;
+  height: 100%;
+
+  cursor: pointer;
+
+  border-right: 1px solid #f2f2f2;
+
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    scale: 1.02;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 12px 27px 12px;
+
+    color: #333333;
+    border-radius: 16px;
+
+    label {
+      margin-bottom: 4px;
+
+      font-weight: 800;
+      font-size: 9px;
+      line-height: 11px;
+      text-transform: uppercase;
+    }
+
+    .nav-input {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+
+      border: none;
+      outline: none;
+
+      cursor: pointer;
+
+      @include placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #bdbdbd;
+      }
+
+      .app__navbar-blank {
+        color: #bdbdbd;
+      }
+    }
+  }
+}
+
+.app__navbar-search-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.app__navbar-search-btn-container-expanded {
+  width: 30%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px 0;
+
+  button {
+    @extend .app__navbar-search-btn;
+
+    background-color: var(--accent-color);
+    color: #f2f2f2;
+
+    border-radius: 16px;
+    padding: 15px 27px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    svg {
+      margin-right: 11px;
+    }
+  }
+}
