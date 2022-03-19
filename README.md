@@ -35,7 +35,8 @@
 ## Overview
 
 ![Desktop View](./desktop.png)
-![Mobile View](./mobile_iPhone_12_Pro.png)
+
+[Click here](./mobile_iPhone_12_Pro.png) for mobile view
 
 Windbnb is a simple clone of airbnb website and is only frontend for now. Created using React and Redux.
 
@@ -63,7 +64,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/asi309/windbnb
 
 # Install dependencies
 $ yarn install
