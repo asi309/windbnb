@@ -65,7 +65,11 @@ const Filter = () => {
           locationState === '' ? (
             <p className="app__navbar-blank">Add location</p>
           ) : (
-            <p className="app__navbar-filled">{locationState}</p>
+            <p className="app__navbar-filled">
+              {locationState.length > 18
+                ? `${locationState.slice(0, 15)}...`
+                : locationState}
+            </p>
           )
         ) : (
           <Input

@@ -45,3 +45,11 @@ main {
 
   flex-direction: column;
 }
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding-top: 175px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

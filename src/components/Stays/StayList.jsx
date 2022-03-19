@@ -11,7 +11,7 @@ const StayList = () => {
   const filteredStays = getFilteredStays(stays, filters);
 
   return (
-    <div className="app__stays-list app__flex">
+    <div className="app__stays-list">
       {filteredStays.map((stay, idx) => (
         <Stay key={`stay-${idx}`} stay={stay} />
       ))}

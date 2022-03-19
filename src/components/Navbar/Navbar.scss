@@ -49,3 +49,36 @@ nav.app__navbar {
     padding-left: 27px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  nav.app__navbar {
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-bottom: 36px;
+
+    max-height: 255px;
+  }
+
+  .app__navbar-expanded {
+    top: 255px;
+
+    .app__navbar-counters {
+      margin-left: 0;
+      padding-left: 0;
+
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav.app__navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 22px;
+  }
+}

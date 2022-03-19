@@ -11,6 +11,9 @@ div.app__header {
   line-height: 29px;
 
   color: var(--primary-color);
+
+  max-width: 670px;
+  word-wrap: break-word;
 }
 
 .app__header-count {

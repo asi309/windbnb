@@ -1,19 +1,22 @@
 import { useSelector } from 'react-redux';
 
+import { getFilteredStays } from '../../selectors';
 import './Header.scss';
 
 const Header = () => {
-  const location = useSelector((state) => state.filters.location);
-  const stays = useSelector(state => state.stays)
+  const filters = useSelector((state) => state.filters);
+  const stays = useSelector((state) => state.stays);
 
-  const numStays = stays.length;
+  const filteredStays = getFilteredStays(stays, filters);
 
   return (
     <div className="app__header app__flex">
-      <div className="app__header-location">Stays in {location}</div>
-      <div className="app__header-count">{numStays.length <= 12 ? numStays : '12+'} stays</div>
-    </div>    
-  )
-}
+      <div className="app__header-location">Stays in {filters.location}</div>
+      <div className="app__header-count">
+        {filteredStays.length <= 12 ? filteredStays.length : '12+'} stays
+      </div>
+    </div>
+  );
+};
 
-export default Header
+export default Header;

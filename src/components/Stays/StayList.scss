@@ -1,0 +1,36 @@
+.app__stays-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(380px, 1fr));
+  gap: 50px 32px;
+
+  margin-bottom: 70px;
+
+  width: 100%;
+}
+
+@media screen and (min-width: 1640px) {
+  .app__stays-list {
+    gap: 60px 48px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .app__stays-list {
+    gap: 36px 24px;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .app__stays-list {
+    gap: 60px 48px;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .app__stays-list {
+    gap: 48px 0;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}

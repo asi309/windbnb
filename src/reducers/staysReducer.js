@@ -22,7 +22,7 @@ const staysReducer = (state = [], action) => {
         (stay) => stay.title.toLowerCase() !== action.title.toLowerCase()
       );
     case 'SET_STAYS':
-      return [...state, ...action.stays];
+      return [...action.stays];
     default:
       return state;
   }

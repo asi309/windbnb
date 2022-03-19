@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="app app__flex">
       <Navbar />
-      <main className='app__flex'>
+      <main className="app__flex">
         <Header />
         <StayList />
       </main>

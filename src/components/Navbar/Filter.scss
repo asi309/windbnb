@@ -20,6 +20,8 @@
 
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+
+  max-width: 320px;
 }
 
 .app__navbar-search-expanded {
@@ -28,6 +30,7 @@
   justify-content: space-between;
 
   width: 100%;
+  max-width: unset;
 }
 
 .app__navbar-search-location,
@@ -146,5 +149,35 @@
     svg {
       margin-right: 11px;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app__navbar-search-expanded {
+    align-self: center;
+    flex-direction: column;
+  }
+
+  .app__navbar-search-location-expanded,
+  .app__navbar-search-guests-expanded {
+    width: 100%;
+
+    border-right: unset;
+  }
+
+  .app__navbar-search-location-expanded {
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .app__navbar-search-btn-container-expanded {
+    padding-top: 16px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__navbar-search {
+    align-self: center;
+
+    margin-top: 40px;
   }
 }
