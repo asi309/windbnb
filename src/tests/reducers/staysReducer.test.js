@@ -13,7 +13,7 @@ test('Should set stays initial state', () => {
 });
 
 test('Should set stays from array', () => {
-  const state = staysReducer(undefined, { type: 'SET_STAYS', stays });
+  const state = staysReducer(['stay3'], { type: 'SET_STAYS', stays });
 
   expect(state).toEqual(stays);
 });

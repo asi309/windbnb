@@ -21,7 +21,9 @@ const Counter = ({ title, subtitle, count, setCount }) => {
         <button type="button" name="decrement" onClick={handleClick}>
           -
         </button>
-        <div className="count">{count}</div>
+        <div className="count" data-testid={`count-${title.toLowerCase()}`}>
+          {count}
+        </div>
         <button type="button" name="increment" onClick={handleClick}>
           +
         </button>

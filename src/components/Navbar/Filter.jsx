@@ -53,11 +53,13 @@ const Filter = () => {
   );
 
   return (
-    <div className={`app__navbar-search${navOpen ? '-expanded' : ''}`}>
+    <div
+      className={`app__navbar-search${navOpen ? '-expanded' : ''}`}
+      data-testid="filters"
+    >
       <div
         className={`app__navbar-search-location${navOpen ? '-expanded' : ''}`}
         onClick={(e) => {
-          e.stopPropagation();
           dispatch(uiActions.setLocationOpen());
         }}
       >
@@ -83,7 +85,6 @@ const Filter = () => {
       <div
         className={`app__navbar-search-guests${navOpen ? '-expanded' : ''}`}
         onClick={(e) => {
-          e.stopPropagation();
           dispatch(uiActions.setGuestOpen());
         }}
       >

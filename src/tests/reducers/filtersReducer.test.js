@@ -10,6 +10,8 @@ test('Should set default filter state', () => {
   expect(state).toEqual({
     location: 'Finland',
     guests: 0,
+    adults: 0,
+    children: 0,
   });
 });
 
@@ -28,4 +30,18 @@ test('Should set guests', () => {
   const state = filtersReducer(undefined, actionObj);
 
   expect(state.guests).toEqual(actionObj.guests);
+});
+
+test('Should set adults', () => {
+  const actionObj = { type: 'SET_ADULTS', adults: 12 };
+  const state = filtersReducer(undefined, actionObj);
+
+  expect(state.adults).toEqual(actionObj.adults);
+});
+
+test('Should set children', () => {
+  const actionObj = { type: 'SET_CHILDREN', children: 12 };
+  const state = filtersReducer(undefined, actionObj);
+
+  expect(state.children).toEqual(actionObj.children);
 });

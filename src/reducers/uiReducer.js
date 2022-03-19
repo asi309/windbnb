@@ -1,10 +1,8 @@
 const uiReducer = (
-  state = { guestOpen: false, locOpen: false, navOpen: false },
+  state = { guestOpen: false, locOpen: false, },
   action
 ) => {
   switch (action.type) {
-    case 'NAV_OPEN':
-      return { ...state, navOpen: !state.navOpen };
     case 'GUEST_OPEN':
       return {
         ...state,

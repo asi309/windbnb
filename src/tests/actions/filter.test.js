@@ -15,3 +15,19 @@ test('Should set guests', () => {
     guests: 20,
   });
 });
+
+test('Should set adults', () => {
+  const action = filterActions.setAdults(20);
+  expect(action).toEqual({
+    type: 'SET_ADULTS',
+    adults: 20,
+  });
+});
+
+test('Should set children', () => {
+  const action = filterActions.setChildren(20);
+  expect(action).toEqual({
+    type: 'SET_CHILDREN',
+    children: 20,
+  });
+});
