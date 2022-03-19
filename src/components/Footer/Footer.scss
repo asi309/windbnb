@@ -1,0 +1,24 @@
+footer {
+  height: 80px;
+
+  color: var(--gray-light);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+.app__footer-logo {
+  height: 20px;
+  margin-left: 8px;
+  margin-right: 4px;
+
+  img {
+    height: 100%;
+
+    object-fit: cover;
+  }
+}

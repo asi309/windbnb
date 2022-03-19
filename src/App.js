@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { Header, Navbar, StayList } from './components';
+import { Footer, Header, Navbar, StayList } from './components';
 import { staysActions } from './actions';
 
 import dataJson from './data/stays.json';
@@ -21,6 +21,7 @@ function App() {
         <Header />
         <StayList />
       </main>
+      <Footer />
     </div>
   );
 }
